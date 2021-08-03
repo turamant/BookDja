@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Контакт{% endblock title %}</title>
+
+{% block content %}
+<p><a href="{% url 'phonebooks' %}">Переход к списку контактов</a></p>
+<p><a href="{% url 'phonebook_update' phboo.url %}">+ Редактировать контакт</a></p>
+<p><a href="{% url 'phonebook_delete' phboo.url %}">+ Удалить контакт</a></p>
+
+<ul>
+    <li>Фамилия: {{ phboo.name }}</li>
+    <li>Телефон: {{ phboo.nomer }}</li>
+
+    <li>Дата рождения: {{ phboo.birthday }}</li>
+</ul>
+{% endblock %}

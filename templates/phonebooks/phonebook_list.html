@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<title>{% block title %}Список всех контактов{% endblock title %}</title>
+
+{% block content %}
+<a href="{% url 'home' %}">на Главную страницу</a>   |||   <a href="{% url 'phonebook_new' %}">+ Новый пост</a>
+
+<h2>Все контакты из PhoneBook</h2>
+  {% for p in phonebooks %}
+    <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+  {% endfor %}
+
+{% endblock %}

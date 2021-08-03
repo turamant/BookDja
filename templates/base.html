@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}PhoneBook{% endblock title %}</title>
+    {% block css %}
+      <!-- Latest compiled and minified Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    {% endblock css %}
+  </head>
+
+  <body>
+  {% block content %}
+        <p>Здесь нужно разместить текст в контексте страницы.</p>
+  {% endblock content %}
+
+  </body>
