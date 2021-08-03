@@ -13,6 +13,17 @@
   </head>
 
   <body>
+  <header>
+        <h3 class="h6">Search месяц</h3>
+    </header>
+    <form action="{% url 'search_results' %}" class="search-form">
+        <div class="form-group">
+        <input type="text" name="q" placeholder="Что искать? ...">
+        <button type="submit" class="submit"><i class="icon-search"></i></button>
+        </div>
+    </form>
+  <header>
+
   {% block content %}
         <p>Здесь нужно разместить текст в контексте страницы.</p>
   {% endblock content %}

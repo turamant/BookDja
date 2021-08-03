@@ -12,7 +12,7 @@ class PhbooForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'nomer': forms.TextInput(attrs={'class': 'form-control'}),
-            'birthday': forms.TextInput(attrs={'class': 'form-control'}),
+            'birthday': forms.DateInput(attrs={'class': 'form-control'}),
             'url': forms.TextInput(attrs={'class': 'form-control'}),
         }
 

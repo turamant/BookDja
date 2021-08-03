@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h4>Результат поиска</h4>
+{% for phonebook in object_list %}
+    <a href="{{ phonebook.get_absolute_url }}">{{ phonebook.name }} - {{ phonebook.birthday }}</a>
+    <br />
+{% endfor %}
+
+{% endblock %}
