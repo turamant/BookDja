@@ -12,8 +12,9 @@
     <p class="card-text">Фамилия: {{ phboo.name }}</p>
       <p class="card-text">Телефон: {{ phboo.nomer }}</p>
       <p class="card-text">Дата рождения: {{ phboo.birthday }}</p>
-    <a href="{% url 'phonebooks' %}" class="btn btn-outline-warning">к списку</a>
-    <a href="{% url 'phonebook_update' phboo.url %}" class="btn btn-outline-primary ml-5">Изменить</a>
+    <a href="{% url 'phonebooks' %}" class="btn btn-outline-warning ">к списку</a>
+    <a href="{% url 'phonebook_new' %}" class="btn  btn-outline-success ml-5">Добавить</a>
+    <a href="{% url 'phonebook_update' phboo.url %}" class="btn btn-outline-primary mt-1">Изменить</a>
     <a href="{% url 'phonebook_delete' phboo.url %}" class="btn btn-danger ml-5 mt-1">Удалить</a>
 
   </div>
