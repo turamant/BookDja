@@ -7,12 +7,12 @@
 {% block content %}
 
     {% if user.is_authenticated %}
-<h4 class="mt-5">Hi {{ user.username }}!</h4>
+<h4 class="mt-5 text-success">Hi {{ user.username }}!</h4>
     <h4 class="mb-3 ml-4">Home Page</h4>
     <blockquote>Это приложение для работы с базой данных</blockquote>
     <p><a href="{% url 'logout' %}">logout</a></p>
     {% else %}
-    <p class="mt-5">You are not logged in</p>
+    <p class="mt-5 text-danger">You are not logged in</p>
     <a href="{% url 'login' %}">login</a> |
     <a href="{% url 'signup' %}">signup</a>
     {% endif %}
