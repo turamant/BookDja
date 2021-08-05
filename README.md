@@ -10,7 +10,7 @@
  <li>pipenv install -r requirements.txt</li>
 
 <h3>How to use</h3>
-<li>python manage.py runserver:8000</li>
+<li>python manage.py runserver</li>
 
 <h3>Tested on</h3>
     <li>Manjaro</li>
