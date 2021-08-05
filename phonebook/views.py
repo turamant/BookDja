@@ -21,7 +21,8 @@ class SearchResultsView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            object_list = self.queryset.filter(birthday__month=query)
+            #object_list = self.queryset.filter(birthday__gte=query).order_by('-birthday')
+            object_list = self.queryset.filter(name__startswith=query).order_by('name')
         return object_list
 
 
@@ -31,7 +32,7 @@ class HomePageView(TemplateView):
 
 class ListViewPhoneBook(View):
     def get(self, request):
-        phonebooks = Phboo.objects.all()
+        phonebooks = Phboo.objects.all().order_by('name')
         return render(request, 'phonebooks/phonebook_list.html',
                       context={'phonebooks': phonebooks})
 

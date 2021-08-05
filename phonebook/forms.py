@@ -9,8 +9,9 @@ class PhbooForm(forms.ModelForm):
     class Meta:
         model = Phboo
         fields = ['name', 'nomer', 'birthday', 'url']
+
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'This is фамилия...'}),
             'nomer': forms.TextInput(attrs={'class': 'form-control'}),
             'birthday': forms.DateInput(attrs={'class': 'form-control'}),
             'url': forms.TextInput(attrs={'class': 'form-control'}),

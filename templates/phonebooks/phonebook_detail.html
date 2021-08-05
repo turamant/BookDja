@@ -3,14 +3,20 @@
 <title>{% block title %}Контакт{% endblock title %}</title>
 
 {% block content %}
-<p><a href="{% url 'phonebooks' %}">Переход к списку контактов</a></p>
-<p><a href="{% url 'phonebook_update' phboo.url %}">+ Редактировать контакт</a></p>
-<p><a href="{% url 'phonebook_delete' phboo.url %}">+ Удалить контакт</a></p>
 
-<ul>
-    <li>Фамилия: {{ phboo.name }}</li>
-    <li>Телефон: {{ phboo.nomer }}</li>
+<div class="card border-info ml-5 mt-5" style="max-width: 18rem;">
+  <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+  <div class="card-header">Карточка контакта</div>
+  <div class="card-body">
+    <h5 class="card-title">Информация</h5>
+    <p class="card-text">Фамилия: {{ phboo.name }}</p>
+      <p class="card-text">Телефон: {{ phboo.nomer }}</p>
+      <p class="card-text">Дата рождения: {{ phboo.birthday }}</p>
+    <a href="{% url 'phonebooks' %}" class="btn btn-outline-warning">к списку</a>
+    <a href="{% url 'phonebook_update' phboo.url %}" class="btn btn-outline-primary ml-5">Изменить</a>
+    <a href="{% url 'phonebook_delete' phboo.url %}" class="btn btn-danger ml-5 mt-1">Удалить</a>
 
-    <li>Дата рождения: {{ phboo.birthday }}</li>
-</ul>
+  </div>
+</div>
+
 {% endblock %}

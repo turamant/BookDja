@@ -13,17 +13,43 @@
   </head>
 
   <body>
-  <header>
-        <h3 class="h6">Search месяц</h3>
-    </header>
-    <form action="{% url 'search_results' %}" class="search-form">
-        <div class="form-group">
-        <input type="text" name="q" placeholder="Что искать? ...">
-        <button type="submit" class="submit"><i class="icon-search"></i></button>
-        </div>
-    </form>
-  <header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'phonebooks' %}">Phonebook</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <form action="{% url 'search_results' %}" method="get" class="form-inline my-2 my-lg-0">
+      <input name="q" class="form-control mr-sm-2" type="search" placeholder="Искать по первой букве фамилии" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+  </div>
+</nav>
   {% block content %}
         <p>Здесь нужно разместить текст в контексте страницы.</p>
   {% endblock content %}
